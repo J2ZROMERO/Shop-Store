@@ -3,9 +3,10 @@ import './App.css';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Header from './components/Header';
+import Footer from './components/Footer';
 function App() {
   return (
-    <div className='container'>
+    <div className='container' >
 
       <Header />
       <Routes>  
@@ -14,6 +15,12 @@ function App() {
       <Route path='/cart' element={<Cart />} />
       
       </Routes>
+
+      
+      <Footer/>
+      
+      
+
     </div>
   );
 }

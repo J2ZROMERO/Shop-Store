@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faStore } from '@fortawesome/free-solid-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
 
 const Header = () => {
-
-
-
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
+            <div className="container-fluid">
+                
+                <Link to="/" className="navbar-brand">  ONLINE SHOPPING <FontAwesomeIcon icon={faStore} />  </Link>
 
-<Link to="/" className="navbar-brand">Navbar
     
-</Link>
+
     <button
       className="navbar-toggler"
       type="button"
@@ -27,14 +30,15 @@ const Header = () => {
         <li className="nav-item">
           <Link to="/" className="nav-link active" aria-current="page">
 
-            Home
+          <FontAwesomeIcon icon={faHome} />
+
             </Link>
           
         </li>
         <li className="nav-item">
           <Link to={'/cart'} className="nav-link active" aria-current="page">
           
-            Link
+          <FontAwesomeIcon icon={faCartShopping} /> {/* Use FontAwesomeIcon */}
           </Link>
           
         </li>
