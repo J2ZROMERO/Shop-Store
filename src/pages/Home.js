@@ -6,11 +6,10 @@ import ProductTile from "../components/ProductTile";
 const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false); // Set loading to true initially
-
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch('https://fakestoreapi.com/products');
+        const res = await fetch(process.env.REACT_APP_API_URL);
         const data = await res.json();
         setProducts(data);
         setLoading(false); // Set loading to false after data is fetched
